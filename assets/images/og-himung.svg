@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#FFFDF5"/>
+  <path d="M0 454h1200v176H0z" fill="#FFD928"/>
+  <circle cx="1010" cy="120" r="86" fill="#FF4F9A" stroke="#111" stroke-width="10"/>
+  <rect x="80" y="82" width="1040" height="466" rx="28" fill="#fff" stroke="#111" stroke-width="10"/>
+  <text x="130" y="218" font-family="Arial, sans-serif" font-size="82" font-weight="900" fill="#111">HIMUNG.ID</text>
+  <text x="132" y="310" font-family="Arial, sans-serif" font-size="54" font-weight="800" fill="#3D7BFF">Teknologi sederhana</text>
+  <text x="132" y="382" font-family="Arial, sans-serif" font-size="54" font-weight="800" fill="#111">untuk pendidikan yang lebih mudah.</text>
+  <rect x="132" y="430" width="370" height="64" rx="10" fill="#FFD928" stroke="#111" stroke-width="7"/>
+  <text x="160" y="473" font-family="Arial, sans-serif" font-size="30" font-weight="900" fill="#111">by Wajib Himung</text>
+  <path d="M850 226h112l34 54v140H850z" fill="#7047FF" stroke="#111" stroke-width="9" stroke-linejoin="round"/>
+  <path d="M962 226v58h38" fill="#fff" stroke="#111" stroke-width="9" stroke-linejoin="round"/>
+  <circle cx="864" cy="156" r="28" fill="#2ED47A" stroke="#111" stroke-width="8"/>
+</svg>

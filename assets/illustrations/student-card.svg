@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" role="img" aria-label="Ilustrasi siswa">
+  <rect x="24" y="38" width="372" height="188" rx="20" fill="#FFE3F0" stroke="#111" stroke-width="8"/>
+  <rect x="243" y="58" width="82" height="142" rx="14" fill="#fff" stroke="#111" stroke-width="7"/>
+  <rect x="260" y="78" width="48" height="76" rx="6" fill="#FFD928"/>
+  <path d="M273 178h22" stroke="#111" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="139" cy="94" r="41" fill="#FFD2BA" stroke="#111" stroke-width="7"/>
+  <path d="M101 88c7-36 56-52 82-12-18 12-52 16-82 12z" fill="#111"/>
+  <path d="M124 111c8 7 22 7 30 0" fill="none" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+  <path d="M76 220c9-64 34-96 66-96s57 32 66 96z" fill="#FF4F9A" stroke="#111" stroke-width="8"/>
+  <path d="m56 62 13-17 13 17 20 4-15 14 2 21-20-10-20 10 2-21-15-14z" fill="#FFD928" stroke="#111" stroke-width="6" stroke-linejoin="round"/>
+</svg>

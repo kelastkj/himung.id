@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" role="img" aria-label="Ilustrasi sekolah">
+  <rect x="24" y="50" width="372" height="176" rx="20" fill="#E9E3FF" stroke="#111" stroke-width="8"/>
+  <path d="M70 118 210 40l140 78" fill="#FFD928" stroke="#111" stroke-width="8" stroke-linejoin="round"/>
+  <rect x="91" y="118" width="238" height="92" fill="#fff" stroke="#111" stroke-width="8"/>
+  <rect x="184" y="150" width="52" height="60" fill="#3D7BFF" stroke="#111" stroke-width="7"/>
+  <rect x="116" y="142" width="38" height="34" fill="#2ED47A" stroke="#111" stroke-width="6"/>
+  <rect x="266" y="142" width="38" height="34" fill="#FF4F9A" stroke="#111" stroke-width="6"/>
+  <circle cx="210" cy="96" r="22" fill="#fff" stroke="#111" stroke-width="7"/>
+  <path d="M210 84v13l10 7" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+</svg>
