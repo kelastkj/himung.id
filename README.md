@@ -1,46 +1,88 @@
 # HIMUNG.ID
 
-Website portfolio dan pusat navigasi produk Himung. Situs menggunakan HTML, CSS, dan JavaScript statis sehingga dapat dipublikasikan langsung melalui GitHub Pages.
+Website resmi HIMUNG.ID untuk memperkenalkan produk aplikasi pendidikan yang dapat digunakan oleh guru, siswa, dan sekolah. Situs ini memuat katalog produk, rincian fitur, tangkapan layar aplikasi, kanal akses resmi, serta informasi penerapan produk di sekolah.
 
-## Halaman Produk
+Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework sehingga ringan dan dapat dipublikasikan sebagai situs statis.
 
-- `/aplikasi/jurnalku/`
-- `/aplikasi/jurnal-pkl/`
-- `/aplikasi/rpp-studio/`
-- `/aplikasi/jurnal-guru-wali/`
+## Produk
 
-Data produk berada di `js/products.js` dan digunakan bersama oleh beranda, dialog pratinjau, serta seluruh halaman detail. Screenshot produk dapat ditambahkan melalui properti `screenshots` tanpa mengubah template halaman.
+| Produk | Kegunaan | Akses |
+| --- | --- | --- |
+| JurnalKu | Administrasi mengajar harian, jurnal, presensi, tugas, penilaian, rekap, dan ekspor dokumen | [Google Play](https://play.google.com/store/apps/details?id=id.web.jurnalkuaja.twa) |
+| Jurnal PKL | Pengelolaan PKL, presensi GPS, jurnal siswa, kegiatan guru, monitoring, penilaian rapor, dan layanan WhatsApp | [SMKN 1 Telagasari](https://play.google.com/store/apps/details?id=id.sch.smkn1telagasari.jurnal_pkl.twa) / [SMKN 2 Marabahan](https://play.google.com/store/apps/details?id=id.sch.smkn2marabahan.jurnal_pkl) |
+| RPP Studio | Penyusunan Perencanaan Pembelajaran Mendalam, pratinjau A4, dan ekspor PDF atau Word | [Buka aplikasi](https://rpm.smkn1telagasari.sch.id/) |
+| Jurnal Guru Wali | Jurnal pendampingan, pemantauan siswa, tindak lanjut, rekap, serta laporan PDF dan Excel | [Buka aplikasi](https://guruwali.jurnalkuaja.web.id/) |
 
-Website portfolio dan digital playground untuk aplikasi, tools, eksperimen, dan karya digital Himung.
+## Halaman
 
-## Struktur
+- `/` - beranda dan ringkasan seluruh produk
+- `/aplikasi/` - katalog produk HIMUNG.ID
+- `/aplikasi/jurnalku/` - detail JurnalKu
+- `/aplikasi/jurnal-pkl/` - detail Jurnal PKL
+- `/aplikasi/rpp-studio/` - detail RPP Studio
+- `/aplikasi/jurnal-guru-wali/` - detail Jurnal Guru Wali
+
+## Fitur Website
+
+- Desain responsif untuk perangkat mobile, tablet, dan desktop.
+- Katalog produk dengan status ketersediaan dan akses resmi.
+- Halaman detail berisi manfaat, kelompok fitur, platform, dan galeri tangkapan layar.
+- Dialog pratinjau produk pada beranda dan halaman katalog.
+- Navigasi mobile, animasi masuk, dan dukungan preferensi reduced motion.
+- Metadata SEO, Open Graph, data terstruktur JSON-LD, `robots.txt`, dan `sitemap.xml`.
+- URL katalog `/aplikasi/` yang dapat diakses langsung tanpa bergantung pada fragmen beranda.
+
+## Struktur Proyek
 
 ```text
 /
-├── index.html
-├── assets/
-│   ├── images/
-│   ├── icons/
-│   └── illustrations/
-├── css/
-├── js/
-└── README.md
+|-- index.html
+|-- aplikasi/
+|   |-- index.html
+|   |-- jurnalku/
+|   |-- jurnal-pkl/
+|   |-- rpp-studio/
+|   `-- jurnal-guru-wali/
+|-- assets/
+|   |-- icons/
+|   |-- illustrations/
+|   `-- screenshots/
+|-- css/
+|   |-- styles.css
+|   `-- product-detail.css
+|-- js/
+|   |-- products.js
+|   |-- main.js
+|   `-- product-detail.js
+|-- robots.txt
+`-- sitemap.xml
 ```
 
-## Menjalankan Lokal
+## Menjalankan Secara Lokal
 
-Website ini static. Bisa dibuka langsung dari `index.html`, atau dijalankan dengan server static:
+Jalankan server statis dari root repository:
 
 ```bash
 python -m http.server 4173
 ```
 
-Lalu buka `http://localhost:4173`.
+Kemudian buka `http://localhost:4173`.
 
-## Deploy GitHub Pages
+Penggunaan server lokal disarankan agar URL direktori, pemuatan aset, dan halaman detail bekerja seperti pada hosting produksi.
 
-Publikasikan isi root repository ini melalui GitHub Pages. Pastikan custom domain `himung.id` diarahkan dari pengaturan repository jika domain sudah siap.
+## Mengelola Konten Produk
 
-## Konten Produk
+Data seluruh produk berada di `js/products.js`. Beranda, katalog, dialog pratinjau, dan halaman detail menggunakan sumber data yang sama agar informasi tetap konsisten.
 
-Data produk berada di `js/main.js` pada array `products`. Produk baru dapat ditambahkan dari struktur data tersebut.
+Untuk memperbarui produk:
+
+1. Ubah informasi dasar, status ketersediaan, platform, fitur, dan tautan pada `js/products.js`.
+2. Simpan tangkapan layar versi WebP dan sumber beresolusi tinggi di `assets/screenshots/<slug-produk>/`.
+3. Daftarkan gambar melalui properti `screenshots` pada produk terkait.
+4. Perbarui metadata halaman detail dan `sitemap.xml` jika menambahkan produk baru.
+
+## Publikasi
+
+Repository dapat dipublikasikan melalui GitHub Pages atau layanan hosting statis lainnya. Domain produksi yang digunakan adalah [himung.id](https://himung.id/).
+
+Untuk pertanyaan penggunaan atau penerapan produk, hubungi [wajibhimung@gmail.com](mailto:wajibhimung@gmail.com).

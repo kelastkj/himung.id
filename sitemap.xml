@@ -10,6 +10,14 @@
     </image:image>
   </url>
   <url>
+    <loc>https://himung.id/aplikasi/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <image:image>
+      <image:loc>https://himung.id/assets/images/seo/og-home.jpg</image:loc>
+      <image:title>Katalog aplikasi pendidikan HIMUNG.ID</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://himung.id/aplikasi/jurnalku/</loc>
     <lastmod>2026-08-17</lastmod>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnalku/dashboard.jpg</image:loc><image:title>Dashboard aplikasi jurnal guru JurnalKu</image:title></image:image>

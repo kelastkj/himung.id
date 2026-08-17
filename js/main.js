@@ -2,14 +2,15 @@ document.documentElement.classList.add("js");
 
 const { products, icons } = window.HimungCatalog;
 const productGrid = document.querySelector("[data-products]");
+const productBase = document.body.dataset.productBase || "aplikasi";
 
 if (productGrid) {
   productGrid.innerHTML = products.map((product, index) => `
     <article class="product-card reveal" style="--product-color:${product.color};--product-accent:${product.accent}">
       <div class="product-visual"><div class="product-icon">${icons[product.icon]}</div><div><h3>${product.name}</h3><p><strong>${product.subtitle}</strong></p></div></div>
-      <div class="product-meta"><span class="badge">${product.category}</span></div>
+      <div class="product-meta"><span class="badge">${product.category}</span><span class="product-availability"><i aria-hidden="true"></i>${product.availability}</span></div>
       <p>${product.description}</p>
-      <button class="card-link" type="button" data-product-index="${index}" aria-label="Lihat pratinjau ${product.name}">Lihat Detail &rarr;</button>
+      <a class="card-link" href="${productBase}/${product.slug}/" data-product-index="${index}" aria-label="Lihat akses dan detail produk ${product.name}">Lihat Akses &amp; Detail &rarr;</a>
     </article>
   `).join("");
 }
@@ -37,7 +38,7 @@ const openProductDialog = (index, trigger) => {
   productDialog.querySelector("[data-dialog-summary]").textContent = product.summary;
   productDialog.querySelector("[data-dialog-features]").innerHTML = renderFeatures(product);
   productDialog.querySelector("[data-dialog-actions]").innerHTML = `
-    <a class="dialog-page-link" href="aplikasi/${product.slug}/">Lihat Halaman Produk <span aria-hidden="true">&rarr;</span></a>
+    <a class="dialog-page-link" href="${productBase}/${product.slug}/">Lihat Halaman Produk <span aria-hidden="true">&rarr;</span></a>
     ${product.links.map((link) => `<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label} <span aria-hidden="true">&nearr;</span></a>`).join("")}
   `;
   productDialog.showModal();
@@ -46,7 +47,10 @@ const openProductDialog = (index, trigger) => {
 
 productGrid?.addEventListener("click", (event) => {
   const trigger = event.target.closest("[data-product-index]");
-  if (trigger) openProductDialog(Number(trigger.dataset.productIndex), trigger);
+  if (trigger) {
+    event.preventDefault();
+    openProductDialog(Number(trigger.dataset.productIndex), trigger);
+  }
 });
 
 const closeProductDialog = () => {

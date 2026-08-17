@@ -6,7 +6,7 @@ const productIndex = products.findIndex((item) => item.slug === slug);
 const product = products[productIndex];
 
 if (!product) {
-  window.location.replace("../../index.html#aplikasi");
+  window.location.replace("../");
 } else {
   document.documentElement.style.setProperty("--product-color", product.color);
   document.documentElement.style.setProperty("--product-accent", product.accent);
@@ -19,7 +19,7 @@ if (!product) {
   document.querySelector("[data-detail-subtitle]").textContent = product.subtitle;
   document.querySelector("[data-detail-summary]").textContent = product.summary;
   document.querySelector("[data-detail-description]").textContent = product.description;
-  document.querySelector("[data-detail-platforms]").innerHTML = product.platforms.map((platform) => `<span>${platform}</span>`).join("");
+  document.querySelector("[data-detail-platforms]").innerHTML = `<span class="detail-availability">&#10003; ${product.availability}</span>${product.platforms.map((platform) => `<span>${platform}</span>`).join("")}`;
   document.querySelector("[data-detail-actions]").innerHTML = product.links.map((link) => `<a class="detail-primary-action" href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label} <span aria-hidden="true">&nearr;</span></a>`).join("");
 
   const quickFeatures = product.featureGroups.flatMap((group) => group.items).slice(0, 4);
