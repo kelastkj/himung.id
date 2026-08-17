@@ -18,6 +18,30 @@
     </image:image>
   </url>
   <url>
+    <loc>https://himung.id/lab/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <image:image>
+      <image:loc>https://himung.id/assets/illustrations/himung-lab-banner.webp</image:loc>
+      <image:title>HIMUNG.ID Lab eksperimen aplikasi dan infrastruktur mandiri</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://himung.id/tentang/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <image:image>
+      <image:loc>https://himung.id/assets/illustrations/about-himung-hero.webp</image:loc>
+      <image:title>Tentang HIMUNG.ID dan pengembangan aplikasi pendidikan</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://himung.id/kontak/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <image:image>
+      <image:loc>https://himung.id/assets/illustrations/contact-himung-hero.webp</image:loc>
+      <image:title>Hubungi HIMUNG.ID untuk produk dan penerapan sekolah</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://himung.id/aplikasi/jurnalku/</loc>
     <lastmod>2026-08-17</lastmod>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnalku/dashboard.jpg</image:loc><image:title>Dashboard aplikasi jurnal guru JurnalKu</image:title></image:image>

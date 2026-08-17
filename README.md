@@ -21,6 +21,9 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework sehingga ri
 - `/aplikasi/jurnal-pkl/` - detail Jurnal PKL
 - `/aplikasi/rpp-studio/` - detail RPP Studio
 - `/aplikasi/jurnal-guru-wali/` - detail Jurnal Guru Wali
+- `/lab/` - eksperimen aplikasi, AI, sistem offline, home server, dan self-hosting
+- `/tentang/` - cerita, prinsip, dan cara kerja HIMUNG.ID
+- `/kontak/` - kontak penggunaan produk, penerapan sekolah, dan ide Lab
 
 ## Fitur Website
 
@@ -43,16 +46,25 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework sehingga ri
 |   |-- jurnal-pkl/
 |   |-- rpp-studio/
 |   `-- jurnal-guru-wali/
+|-- lab/
+|   `-- index.html
+|-- tentang/
+|   `-- index.html
+|-- kontak/
+|   `-- index.html
 |-- assets/
 |   |-- icons/
 |   |-- illustrations/
 |   `-- screenshots/
 |-- css/
 |   |-- styles.css
+|   |-- info-pages.css
 |   `-- product-detail.css
 |-- js/
 |   |-- products.js
 |   |-- main.js
+|   |-- lab.js
+|   |-- site-page.js
 |   `-- product-detail.js
 |-- robots.txt
 `-- sitemap.xml
