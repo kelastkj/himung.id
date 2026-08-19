@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HIMUNG.ID Lab | Eksperimen Aplikasi &amp; Self-Hosting</title>
-    <meta name="description" content="HIMUNG.ID Lab adalah ruang eksperimen aplikasi pendidikan, AI, WhatsApp, sistem offline, home server, dan self-hosting untuk kebutuhan nyata di sekolah." />
+    <title>HIMUNG.ID Lab | Eksperimen Aplikasi, RFID &amp; Self-Hosting</title>
+    <meta name="description" content="HIMUNG.ID Lab adalah ruang eksperimen aplikasi pendidikan, presensi RFID ESP8266, AI, sistem offline, home server, dan self-hosting untuk kebutuhan nyata di sekolah." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="theme-color" content="#19004b" />
     <link rel="canonical" href="https://himung.id/lab/" />
@@ -12,7 +12,7 @@
     <meta property="og:locale" content="id_ID" />
     <meta property="og:site_name" content="HIMUNG.ID" />
     <meta property="og:title" content="HIMUNG.ID Lab | Eksperimen Aplikasi dan Infrastruktur Mandiri" />
-    <meta property="og:description" content="Melihat ide, prototipe, dan teknologi yang sedang diuji HIMUNG.ID sebelum diterapkan pada produk pendidikan." />
+    <meta property="og:description" content="Melihat eksperimen aplikasi, perangkat presensi RFID, dan infrastruktur yang sedang diuji HIMUNG.ID sebelum diterapkan pada produk pendidikan." />
     <meta property="og:url" content="https://himung.id/lab/" />
     <meta property="og:image" content="https://himung.id/assets/illustrations/himung-lab-banner.webp" />
     <meta property="og:image:width" content="1280" />
@@ -20,7 +20,7 @@
     <meta property="og:image:alt" content="Robot HIMUNG.ID bereksperimen di laboratorium digital" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="HIMUNG.ID Lab" />
-    <meta name="twitter:description" content="Eksperimen aplikasi pendidikan, AI, sistem offline, home server, dan self-hosting HIMUNG.ID." />
+    <meta name="twitter:description" content="Eksperimen aplikasi pendidikan, presensi RFID, AI, sistem offline, home server, dan self-hosting HIMUNG.ID." />
     <meta name="twitter:image" content="https://himung.id/assets/illustrations/himung-lab-banner.webp" />
     <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
     <link rel="preload" href="../assets/illustrations/himung-lab-banner.webp" as="image" type="image/webp" fetchpriority="high" />
@@ -43,11 +43,12 @@
             "mainEntity": {
               "@type": "ItemList",
               "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Naya WhatsApp Assistant" },
-                { "@type": "ListItem", "position": 2, "name": "Formulir Offline dan Sinkronisasi" },
-                { "@type": "ListItem", "position": 3, "name": "Pengingat Kegiatan Sekolah" },
-                { "@type": "ListItem", "position": 4, "name": "Penyusunan Dokumen Berbantuan AI" },
-                { "@type": "ListItem", "position": 5, "name": "Infrastruktur Mandiri" }
+                { "@type": "ListItem", "position": 1, "name": "Presensi RFID Wemos D1 ESP8266" },
+                { "@type": "ListItem", "position": 2, "name": "Naya WhatsApp Assistant" },
+                { "@type": "ListItem", "position": 3, "name": "Formulir Offline dan Sinkronisasi" },
+                { "@type": "ListItem", "position": 4, "name": "Pengingat Kegiatan Sekolah" },
+                { "@type": "ListItem", "position": 5, "name": "Penyusunan Dokumen Berbantuan AI" },
+                { "@type": "ListItem", "position": 6, "name": "Infrastruktur Mandiri" }
               ]
             }
           },
@@ -132,14 +133,58 @@
             <div class="lab-filter" role="group" aria-label="Filter eksperimen">
               <button class="is-active" type="button" data-lab-filter="all" aria-pressed="true">Semua</button>
               <button type="button" data-lab-filter="aplikasi" aria-pressed="false">Aplikasi</button>
+              <button type="button" data-lab-filter="perangkat" aria-pressed="false">Perangkat</button>
               <button type="button" data-lab-filter="infrastruktur" aria-pressed="false">Infrastruktur</button>
             </div>
           </div>
-          <p class="lab-filter-result" aria-live="polite" data-lab-filter-result>5 eksperimen ditampilkan</p>
+          <p class="lab-filter-result" aria-live="polite" data-lab-filter-result>6 eksperimen ditampilkan</p>
 
           <div class="experiment-grid" data-lab-experiments>
+            <article class="experiment-card experiment-card-wide experiment-card-rfid reveal" data-lab-category="perangkat">
+              <div class="experiment-card-top"><span class="experiment-number">01 / Eksperimen terbaru</span><span class="experiment-status status-development">Tahap uji perangkat</span></div>
+              <div class="rfid-intro">
+                <div>
+                  <p class="experiment-category">Internet of Things &amp; Presensi</p>
+                  <h3>Presensi RFID Wemos D1 ESP8266</h3>
+                  <p class="experiment-summary">Firmware perangkat presensi yang membaca kartu RFID, mengirimkan data ke server, dan tetap menerima tap ketika WiFi atau API sedang tidak tersedia.</p>
+                  <div class="experiment-tags"><span>Wemos D1</span><span>ESP8266</span><span>MFRC522</span><span>Offline-first</span><span>API</span></div>
+                </div>
+                <div class="rfid-status-panel" aria-label="Alur kerja perangkat presensi RFID">
+                  <span>Kartu RFID</span><i aria-hidden="true">&rarr;</i><span>Perangkat</span><i aria-hidden="true">&rarr;</i><span>API Presensi</span>
+                  <small>Tap disimpan lokal dan disinkronkan otomatis jika koneksi terputus.</small>
+                </div>
+              </div>
+              <div class="rfid-capabilities">
+                <div>
+                  <strong>Yang sudah dicakup firmware</strong>
+                  <ul>
+                    <li>Setup awal melalui Access Point berpassword dan halaman konfigurasi ringan.</li>
+                    <li>Aktivasi perangkat, verifikasi Bearer Token, heartbeat, dan pengiriman UID ke API.</li>
+                    <li>LCD 16x2, log Serial Monitor, pilihan zona waktu, dan tombol setup tahan 5 detik.</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong>Tetap bekerja saat offline</strong>
+                  <ul>
+                    <li>Tap tetap diterima ketika WiFi, internet, atau API tidak dapat diakses.</li>
+                    <li>Antrean lokal LittleFS menampung hingga 1.000 tap atau 128 KB.</li>
+                    <li>Data dikirim kembali secara otomatis setelah koneksi dan layanan pulih.</li>
+                  </ul>
+                </div>
+                <div>
+                  <strong>Perangkat yang digunakan</strong>
+                  <ul>
+                    <li>Wemos D1 ESP8266, RFID reader MFRC522, dan LCD 16x2 I2C.</li>
+                    <li>RTC DS3231 untuk waktu offline serta buzzer sebagai komponen opsional.</li>
+                    <li>Firmware mendukung format UID kartu yang dapat disesuaikan dengan data server.</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="experiment-note"><strong>Status pengembangan:</strong> alur setup, koneksi API, tampilan LCD, tombol setup, dan antrean offline telah tersedia di firmware. Tahap berikutnya adalah compile, pengujian perangkat lengkap, serta validasi akurasi waktu dan sinkronisasi pada kondisi jaringan nyata.</p>
+            </article>
+
             <article class="experiment-card reveal" data-lab-category="aplikasi">
-              <div class="experiment-card-top"><span class="experiment-number">01</span><span class="experiment-status status-testing">Uji terbatas</span></div>
+              <div class="experiment-card-top"><span class="experiment-number">02</span><span class="experiment-status status-testing">Uji terbatas</span></div>
               <p class="experiment-category">WhatsApp &amp; Informasi</p>
               <h3>Naya WhatsApp Assistant</h3>
               <p class="experiment-summary">Asisten informasi PKL bagi orang tua melalui WhatsApp dengan akses baca saja, sehingga informasi dapat diperoleh tanpa mengubah data aplikasi.</p>
@@ -149,7 +194,7 @@
             </article>
 
             <article class="experiment-card reveal" data-lab-category="aplikasi">
-              <div class="experiment-card-top"><span class="experiment-number">02</span><span class="experiment-status status-applied">Diterapkan pada produk</span></div>
+              <div class="experiment-card-top"><span class="experiment-number">03</span><span class="experiment-status status-applied">Diterapkan pada produk</span></div>
               <p class="experiment-category">Offline &amp; Sinkronisasi</p>
               <h3>Formulir Tetap Aman Saat Koneksi Terputus</h3>
               <p class="experiment-summary">Penyimpanan draft di perangkat dan antrean sinkronisasi membantu menjaga isian jurnal atau penilaian ketika jaringan sedang tidak stabil.</p>
@@ -159,7 +204,7 @@
             </article>
 
             <article class="experiment-card reveal" data-lab-category="aplikasi">
-              <div class="experiment-card-top"><span class="experiment-number">03</span><span class="experiment-status status-applied">Diterapkan pada produk</span></div>
+              <div class="experiment-card-top"><span class="experiment-number">04</span><span class="experiment-status status-applied">Diterapkan pada produk</span></div>
               <p class="experiment-category">Notifikasi &amp; Otomatisasi</p>
               <h3>Pengingat Kegiatan Sekolah</h3>
               <p class="experiment-summary">Pengingat otomatis membantu pengguna mengetahui jurnal, presensi, atau validasi yang belum diselesaikan tanpa harus memeriksa satu per satu.</p>
@@ -169,7 +214,7 @@
             </article>
 
             <article class="experiment-card reveal" data-lab-category="aplikasi">
-              <div class="experiment-card-top"><span class="experiment-number">04</span><span class="experiment-status status-applied">Diterapkan pada produk</span></div>
+              <div class="experiment-card-top"><span class="experiment-number">05</span><span class="experiment-status status-applied">Diterapkan pada produk</span></div>
               <p class="experiment-category">AI &amp; Dokumen</p>
               <h3>Penyusunan Dokumen Berbantuan AI</h3>
               <p class="experiment-summary">AI digunakan sebagai alat bantu penyusunan, sementara guru tetap menentukan tujuan pembelajaran dan dapat menyunting seluruh hasil sebelum digunakan.</p>
@@ -179,7 +224,7 @@
             </article>
 
             <article class="experiment-card experiment-card-wide reveal" data-lab-category="infrastruktur">
-              <div class="experiment-card-top"><span class="experiment-number">05</span><span class="experiment-status status-internal">Uji coba internal</span></div>
+              <div class="experiment-card-top"><span class="experiment-number">06</span><span class="experiment-status status-internal">Uji coba internal</span></div>
               <div class="experiment-wide-layout">
                 <div>
                   <p class="experiment-category">Home Server &amp; Self-Hosting</p>
