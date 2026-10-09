@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HIMUNG.ID Lab | Eksperimen Aplikasi, RFID &amp; Self-Hosting</title>
-    <meta name="description" content="HIMUNG.ID Lab adalah ruang eksperimen aplikasi pendidikan, presensi RFID ESP8266, AI, sistem offline, home server, dan self-hosting untuk kebutuhan nyata di sekolah." />
+    <meta name="description" content="HIMUNG.ID Lab menguji ide untuk sekolah: presensi RFID, AI, sistem offline, home server, dan self-hosting. Sebagian sudah jadi produk." />
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
     <meta name="theme-color" content="#19004b" />
     <link rel="canonical" href="https://himung.id/lab/" />
@@ -94,7 +94,7 @@
           <div class="lab-page-hero-copy reveal">
             <p class="lab-page-kicker">HIMUNG.ID Lab</p>
             <h1 id="lab-page-title">Tempat ide diuji sebelum menjadi bagian dari produk.</h1>
-            <p>Di sini kami mencoba cara baru untuk menyederhanakan pekerjaan sekolah, mulai dari aplikasi dan otomatisasi hingga home server dan self-hosting.</p>
+            <p>Di sini kami mencoba cara baru merapikan pekerjaan sekolah: dari aplikasi dan otomatisasi sampai home server dan self-hosting.</p>
             <div class="hero-actions">
               <a class="btn lab-primary-button" href="#eksperimen">Lihat Eksperimen <span aria-hidden="true">&darr;</span></a>
               <a class="btn lab-secondary-button" href="mailto:wibowo@himung.id?subject=Ide%20untuk%20HIMUNG.ID%20Lab">Kirim Ide <span aria-hidden="true">&rarr;</span></a>
@@ -107,20 +107,20 @@
         <div class="container lab-principle-grid">
           <div class="reveal">
             <p class="eyebrow">Cara Kami Bereksperimen</p>
-            <h2 id="lab-principle-title">Berangkat dari kebutuhan, bukan sekadar mencoba teknologi.</h2>
+            <h2 id="lab-principle-title">Semua dimulai dari kebutuhan di sekolah.</h2>
           </div>
-          <p class="lab-principle-copy reveal">Setiap eksperimen dimulai dari pekerjaan yang benar-benar ditemui di sekolah. Hasilnya bisa menjadi fitur baru, berkembang menjadi produk, tetap diuji secara terbatas, atau dihentikan jika belum memberi manfaat yang cukup.</p>
+          <p class="lab-principle-copy reveal">Tiap eksperimen berangkat dari pekerjaan yang kami temui di sekolah. Ada yang berakhir jadi fitur, ada yang berkembang jadi produk, ada yang tetap diuji terbatas, dan ada yang kami hentikan kalau ternyata tidak banyak membantu.</p>
         </div>
         <div class="container lab-process reveal" role="group" aria-label="Tahapan eksperimen HIMUNG.ID Lab">
-          <div><span>01</span><strong>Kebutuhan</strong><small>Masalah nyata ditemukan</small></div>
+          <div><span>01</span><strong>Kebutuhan</strong><small>Ada pekerjaan yang menyita waktu.</small></div>
           <i aria-hidden="true">&rarr;</i>
-          <div><span>02</span><strong>Ide</strong><small>Solusi sederhana dirancang</small></div>
+          <div><span>02</span><strong>Ide</strong><small>Dicari cara paling sederhana.</small></div>
           <i aria-hidden="true">&rarr;</i>
-          <div><span>03</span><strong>Prototipe</strong><small>Alur kerja mulai diuji</small></div>
+          <div><span>03</span><strong>Prototipe</strong><small>Alur mulai dicoba.</small></div>
           <i aria-hidden="true">&rarr;</i>
           <div><span>04</span><strong>Uji Coba</strong><small>Masukan pengguna dipelajari</small></div>
           <i aria-hidden="true">&rarr;</i>
-          <div><span>05</span><strong>Produk</strong><small>Yang bermanfaat diterapkan</small></div>
+          <div><span>05</span><strong>Produk</strong><small>Yang berguna dipakai.</small></div>
         </div>
       </section>
 
@@ -130,7 +130,7 @@
             <div>
               <p class="eyebrow">Yang Sedang Dipelajari</p>
               <h2 id="experiments-title">Eksperimen HIMUNG.ID Lab</h2>
-              <p>Setiap status menunjukkan posisi eksperimen saat ini, bukan janji bahwa seluruhnya telah tersedia sebagai layanan umum.</p>
+              <p>Status di tiap kartu menunjukkan posisi eksperimen sekarang. Belum semuanya tersedia sebagai layanan umum.</p>
             </div>
             <div class="lab-filter" role="group" aria-label="Filter eksperimen">
               <button class="is-active" type="button" data-lab-filter="all" aria-pressed="true">Semua</button>
@@ -148,7 +148,7 @@
                 <div>
                   <p class="experiment-category">Internet of Things &amp; Presensi</p>
                   <h3>Presensi RFID Wemos D1 ESP8266</h3>
-                  <p class="experiment-summary">Firmware perangkat presensi yang membaca kartu RFID, mengirimkan data ke server, dan tetap menerima tap ketika WiFi atau API sedang tidak tersedia.</p>
+                  <p class="experiment-summary">Perangkat presensi yang membaca kartu RFID dan mengirim datanya ke server. Tap tetap diterima walau WiFi atau API sedang mati.</p>
                   <div class="experiment-tags"><span>Wemos D1</span><span>ESP8266</span><span>MFRC522</span><span>Offline-first</span><span>API</span></div>
                 </div>
                 <div class="rfid-status-panel" role="group" aria-label="Alur kerja perangkat presensi RFID">
@@ -178,7 +178,7 @@
                   <ul>
                     <li>Wemos D1 ESP8266, RFID reader MFRC522, dan LCD 16x2 I2C.</li>
                     <li>RTC DS3231 untuk waktu offline serta buzzer sebagai komponen opsional.</li>
-                    <li>Firmware mendukung format UID kartu yang dapat disesuaikan dengan data server.</li>
+                    <li>Format UID kartu bisa disesuaikan dengan data server.</li>
                   </ul>
                 </div>
               </div>
@@ -189,7 +189,7 @@
               <div class="experiment-card-top"><span class="experiment-number">02</span><span class="experiment-status status-testing">Uji terbatas</span></div>
               <p class="experiment-category">WhatsApp &amp; Informasi</p>
               <h3>Naya WhatsApp Assistant</h3>
-              <p class="experiment-summary">Asisten informasi PKL bagi orang tua melalui WhatsApp dengan akses baca saja, sehingga informasi dapat diperoleh tanpa mengubah data aplikasi.</p>
+              <p class="experiment-summary">Asisten WhatsApp yang menjawab pertanyaan orang tua soal PKL. Aksesnya hanya membaca, jadi data aplikasi tidak ikut berubah.</p>
               <div class="experiment-tags"><span>WhatsApp</span><span>Read-only</span><span>PKL</span></div>
               <details><summary>Yang sedang dipelajari</summary><ul><li>Jawaban yang mudah dipahami oleh orang tua.</li><li>Batas akses informasi sesuai kebutuhan pengguna.</li><li>Alur kerja eksternal yang tetap menjaga data utama.</li></ul></details>
               <a class="experiment-product-link" href="../aplikasi/jurnal-pkl/">Lihat penerapan di Jurnal PKL <span aria-hidden="true">&rarr;</span></a>
@@ -199,7 +199,7 @@
               <div class="experiment-card-top"><span class="experiment-number">03</span><span class="experiment-status status-applied">Diterapkan pada produk</span></div>
               <p class="experiment-category">Offline &amp; Sinkronisasi</p>
               <h3>Formulir Tetap Aman Saat Koneksi Terputus</h3>
-              <p class="experiment-summary">Penyimpanan draft di perangkat dan antrean sinkronisasi membantu menjaga isian jurnal atau penilaian ketika jaringan sedang tidak stabil.</p>
+              <p class="experiment-summary">Draf disimpan di perangkat dan dikirim belakangan, jadi isian jurnal atau penilaian tidak hilang saat jaringan tidak stabil.</p>
               <div class="experiment-tags"><span>Draft lokal</span><span>Offline</span><span>Sinkronisasi</span></div>
               <details><summary>Yang sudah diterapkan</summary><ul><li>Autosave draft jurnal dan penilaian pada perangkat.</li><li>Antrean pengiriman ulang ketika koneksi kembali tersedia.</li><li>Halaman offline untuk menjaga alur kerja tetap jelas.</li></ul></details>
               <div class="experiment-links"><a href="../aplikasi/jurnalku/">JurnalKu</a><a href="../aplikasi/jurnal-guru-wali/">Jurnal Guru Wali</a></div>
@@ -209,7 +209,7 @@
               <div class="experiment-card-top"><span class="experiment-number">04</span><span class="experiment-status status-applied">Diterapkan pada produk</span></div>
               <p class="experiment-category">Notifikasi &amp; Otomatisasi</p>
               <h3>Pengingat Kegiatan Sekolah</h3>
-              <p class="experiment-summary">Pengingat otomatis membantu pengguna mengetahui jurnal, presensi, atau validasi yang belum diselesaikan tanpa harus memeriksa satu per satu.</p>
+              <p class="experiment-summary">Pengingat otomatis memberi tahu jurnal, presensi, atau validasi yang belum selesai, tanpa harus dicek satu per satu.</p>
               <div class="experiment-tags"><span>Notifikasi</span><span>Jadwal</span><span>WhatsApp</span></div>
               <details><summary>Yang sudah diterapkan</summary><ul><li>Pengingat jurnal setelah jadwal mengajar selesai.</li><li>Pemeriksaan siswa PKL yang belum melakukan presensi.</li><li>Antrean pemberitahuan untuk guru pembimbing.</li></ul></details>
               <div class="experiment-links"><a href="../aplikasi/jurnalku/">JurnalKu</a><a href="../aplikasi/jurnal-pkl/">Jurnal PKL</a></div>
@@ -219,7 +219,7 @@
               <div class="experiment-card-top"><span class="experiment-number">05</span><span class="experiment-status status-applied">Diterapkan pada produk</span></div>
               <p class="experiment-category">AI &amp; Dokumen</p>
               <h3>Penyusunan Dokumen Berbantuan AI</h3>
-              <p class="experiment-summary">AI digunakan sebagai alat bantu penyusunan, sementara guru tetap menentukan tujuan pembelajaran dan dapat menyunting seluruh hasil sebelum digunakan.</p>
+              <p class="experiment-summary">AI membantu menyusun, tapi guru tetap menentukan tujuan pembelajaran dan bisa menyunting semua hasil sebelum dipakai.</p>
               <div class="experiment-tags"><span>AI</span><span>Dokumen</span><span>Kontrol guru</span></div>
               <details><summary>Prinsip yang dijaga</summary><ul><li>Tujuan pembelajaran dari guru tidak ditulis ulang.</li><li>Hasil dapat diperiksa dan disunting secara manual.</li><li>Tersedia mode cadangan agar alur tidak bergantung penuh pada AI.</li></ul></details>
               <a class="experiment-product-link" href="../aplikasi/rpp-studio/">Lihat penerapan di RPP Studio <span aria-hidden="true">&rarr;</span></a>
@@ -231,7 +231,7 @@
                 <div>
                   <p class="experiment-category">Home Server &amp; Self-Hosting</p>
                   <h3>Infrastruktur Mandiri</h3>
-                  <p class="experiment-summary">Pengujian server yang dikelola secara mandiri untuk memahami cara aplikasi dijalankan, dipantau, dicadangkan, dan dipulihkan dengan lebih baik.</p>
+                  <p class="experiment-summary">Kami mengelola server sendiri untuk belajar menjalankan, memantau, mencadangkan, dan memulihkan aplikasi.</p>
                   <div class="experiment-tags"><span>Home server</span><span>Self-hosting</span><span>Monitoring</span><span>Backup</span></div>
                 </div>
                 <div class="infrastructure-scope">
@@ -249,8 +249,8 @@
         <div class="container lab-outcomes-grid">
           <div class="reveal">
             <p class="eyebrow">Dari Lab Menjadi Produk</p>
-            <h2 id="lab-outcomes-title">Eksperimen yang bermanfaat tidak berhenti sebagai demo.</h2>
-            <p>Beberapa hasil Lab telah menjadi bagian dari produk HIMUNG.ID dan digunakan dalam kegiatan nyata.</p>
+            <h2 id="lab-outcomes-title">Eksperimen yang berguna biasanya berlanjut jadi produk.</h2>
+            <p>Beberapa hasil Lab sudah masuk ke produk HIMUNG.ID dan dipakai di sekolah.</p>
           </div>
           <div class="lab-outcome-list reveal">
             <a href="../aplikasi/jurnal-pkl/"><span>Naya dan otomatisasi WhatsApp</span><strong>Jurnal PKL &rarr;</strong></a>
@@ -263,7 +263,7 @@
 
       <section class="lab-idea section-band" aria-labelledby="lab-idea-title">
         <div class="container lab-idea-panel reveal">
-          <div><p class="lab-page-kicker">Punya kebutuhan yang berulang di sekolah?</p><h2 id="lab-idea-title">Ceritakan pekerjaannya, bukan teknologinya.</h2><p>Kami akan mempelajari apakah kebutuhan tersebut dapat disederhanakan melalui eksperimen berikutnya di HIMUNG.ID Lab.</p></div>
+          <div><p class="lab-page-kicker">Punya kebutuhan yang berulang di sekolah?</p><h2 id="lab-idea-title">Ceritakan pekerjaannya dulu, teknologinya belakangan.</h2><p>Kami akan pelajari apakah kebutuhan itu bisa disederhanakan lewat eksperimen berikutnya di HIMUNG.ID Lab.</p></div>
           <a class="btn btn-primary" href="mailto:wibowo@himung.id?subject=Ide%20untuk%20HIMUNG.ID%20Lab">Kirim Ide ke HIMUNG.ID Lab <span aria-hidden="true">&rarr;</span></a>
         </div>
       </section>
