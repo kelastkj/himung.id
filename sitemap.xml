@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://himung.id/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://himung.id/assets/illustrations/hero-students-himung-v2.webp</image:loc>
       <image:title>Aplikasi pendidikan HIMUNG.ID untuk guru, siswa, dan sekolah</image:title>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://himung.id/aplikasi/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://himung.id/assets/images/seo/og-home.jpg</image:loc>
       <image:title>Katalog aplikasi pendidikan HIMUNG.ID</image:title>
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://himung.id/lab/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://himung.id/assets/illustrations/himung-lab-banner.webp</image:loc>
       <image:title>HIMUNG.ID Lab eksperimen aplikasi dan infrastruktur mandiri</image:title>
@@ -27,7 +27,7 @@
   </url>
   <url>
     <loc>https://himung.id/tentang/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://himung.id/assets/illustrations/about-himung-hero.webp</image:loc>
       <image:title>Tentang HIMUNG.ID dan pengembangan aplikasi pendidikan</image:title>
@@ -35,7 +35,7 @@
   </url>
   <url>
     <loc>https://himung.id/kontak/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://himung.id/assets/illustrations/contact-himung-hero.webp</image:loc>
       <image:title>Hubungi HIMUNG.ID untuk produk dan penerapan sekolah</image:title>
@@ -43,7 +43,7 @@
   </url>
   <url>
     <loc>https://himung.id/aplikasi/jurnalku/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnalku/dashboard.jpg</image:loc><image:title>Dashboard aplikasi jurnal guru JurnalKu</image:title></image:image>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnalku/jadwal-mengajar.jpg</image:loc><image:title>Jadwal mengajar guru di JurnalKu</image:title></image:image>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnalku/isi-jurnal.jpg</image:loc><image:title>Form jurnal mengajar harian JurnalKu</image:title></image:image>
@@ -52,7 +52,7 @@
   </url>
   <url>
     <loc>https://himung.id/aplikasi/jurnal-pkl/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnal-pkl/dashboard-siswa.jpg</image:loc><image:title>Dashboard siswa aplikasi Jurnal PKL</image:title></image:image>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnal-pkl/presensi-gps.jpg</image:loc><image:title>Presensi GPS dan geofencing Jurnal PKL</image:title></image:image>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnal-pkl/jurnal-siswa.jpg</image:loc><image:title>Jurnal harian siswa PKL</image:title></image:image>
@@ -62,7 +62,7 @@
   </url>
   <url>
     <loc>https://himung.id/aplikasi/rpp-studio/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://himung.id/assets/images/seo/og-rpp-studio.jpg</image:loc>
       <image:title>RPP Studio generator Perencanaan Pembelajaran Mendalam</image:title>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://himung.id/aplikasi/jurnal-guru-wali/</loc>
-    <lastmod>2026-08-17</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnal-guru-wali/dashboard.jpg</image:loc><image:title>Dashboard pemantauan Jurnal Guru Wali</image:title></image:image>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnal-guru-wali/input-jurnal-kelas.jpg</image:loc><image:title>Input jurnal per kelas oleh guru wali</image:title></image:image>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnal-guru-wali/pendampingan-individual.jpg</image:loc><image:title>Catatan pendampingan individual siswa</image:title></image:image>

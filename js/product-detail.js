@@ -1,6 +1,5 @@
-document.documentElement.classList.add("js");
-
 const { products, icons } = window.HimungCatalog;
+const { revealObserver } = window.HimungShell;
 const slug = document.body.dataset.product;
 const productIndex = products.findIndex((item) => item.slug === slug);
 const product = products[productIndex];
@@ -117,47 +116,10 @@ if (!product) {
   `;
 
   const contactLink = document.querySelector("[data-product-contact]");
-  contactLink.href = `mailto:wajibhimung@gmail.com?subject=${encodeURIComponent(`Tentang ${product.name} di HIMUNG.ID`)}`;
+  contactLink.href = `mailto:wibowo@himung.id?subject=${encodeURIComponent(`Tentang ${product.name} di HIMUNG.ID`)}`;
 
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08, rootMargin: "0px 0px -6%" });
   document.querySelectorAll(".reveal").forEach((element, index) => {
     element.style.setProperty("--reveal-delay", `${Math.min(index, 4) * 55}ms`);
     revealObserver.observe(element);
   });
 }
-
-const menuToggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector("[data-menu]");
-
-menuToggle?.addEventListener("click", () => {
-  const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-  menuToggle.setAttribute("aria-expanded", String(!expanded));
-  menu?.classList.toggle("is-open", !expanded);
-});
-
-menu?.addEventListener("click", () => {
-  menuToggle?.setAttribute("aria-expanded", "false");
-  menu.classList.remove("is-open");
-});
-
-document.addEventListener("click", (event) => {
-  if (menu && menuToggle && !menu.contains(event.target) && !menuToggle.contains(event.target)) {
-    menuToggle.setAttribute("aria-expanded", "false");
-    menu.classList.remove("is-open");
-  }
-});
-
-const header = document.querySelector(".site-header");
-const backToTop = document.querySelector("[data-back-to-top]");
-window.addEventListener("scroll", () => {
-  header?.classList.toggle("is-scrolled", window.scrollY > 18);
-  backToTop?.classList.toggle("is-visible", window.scrollY > 650);
-}, { passive: true });
-backToTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));

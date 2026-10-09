@@ -1,6 +1,5 @@
-document.documentElement.classList.add("js");
-
 const { products, icons } = window.HimungCatalog;
+const { revealObserver } = window.HimungShell;
 const productGrid = document.querySelector("[data-products]");
 const productBase = document.body.dataset.productBase || "aplikasi";
 
@@ -53,73 +52,19 @@ productGrid?.addEventListener("click", (event) => {
   }
 });
 
-const closeProductDialog = () => {
-  productDialog?.close();
-  document.body.classList.remove("dialog-open");
-  lastDialogTrigger?.focus();
-};
+const closeProductDialog = () => productDialog?.close();
 
 dialogClose?.addEventListener("click", closeProductDialog);
 productDialog?.addEventListener("click", (event) => { if (event.target === productDialog) closeProductDialog(); });
-productDialog?.addEventListener("close", () => document.body.classList.remove("dialog-open"));
+productDialog?.addEventListener("close", () => {
+  document.body.classList.remove("dialog-open");
+  lastDialogTrigger?.focus();
+});
 
 document.querySelectorAll(".product-grid, .audience-grid").forEach((group) => {
   group.querySelectorAll(".reveal").forEach((element, index) => element.style.setProperty("--reveal-delay", `${index * 85}ms`));
 });
 document.querySelectorAll(".hero-grid .reveal").forEach((element, index) => element.style.setProperty("--reveal-delay", `${index * 130}ms`));
-
-const menuToggle = document.querySelector(".menu-toggle");
-const menu = document.querySelector("[data-menu]");
-
-if (menuToggle && menu) {
-  menuToggle.addEventListener("click", () => {
-    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", String(!expanded));
-    menu.classList.toggle("is-open", !expanded);
-  });
-  menu.addEventListener("click", (event) => {
-    if (event.target instanceof HTMLAnchorElement) {
-      menuToggle.setAttribute("aria-expanded", "false");
-      menu.classList.remove("is-open");
-    }
-  });
-  document.addEventListener("click", (event) => {
-    if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-      menuToggle.setAttribute("aria-expanded", "false");
-      menu.classList.remove("is-open");
-    }
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && menu.classList.contains("is-open")) {
-      menuToggle.setAttribute("aria-expanded", "false");
-      menu.classList.remove("is-open");
-      menuToggle.focus();
-    }
-  });
-}
-
-const siteHeader = document.querySelector(".site-header");
-let scrollTicking = false;
-
-const updateActiveNav = () => {
-  siteHeader?.classList.toggle("is-scrolled", window.scrollY > 18);
-  scrollTicking = false;
-};
-
-window.addEventListener("scroll", () => {
-  if (!scrollTicking) { window.requestAnimationFrame(updateActiveNav); scrollTicking = true; }
-}, { passive: true });
-window.addEventListener("resize", updateActiveNav);
-updateActiveNav();
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-visible");
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: "0px 0px -7%" });
 document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
 
 const logo = document.querySelector("[data-logo]");

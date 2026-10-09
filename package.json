@@ -1,0 +1,14 @@
+{
+  "name": "himung-id",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Situs web statis HIMUNG.ID untuk produk aplikasi pendidikan.",
+  "scripts": {
+    "serve": "http-server -p 4173 -c-1",
+    "smoke": "node scripts/smoke-test.js"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "playwright": "^1.47.0"
+  }
+}

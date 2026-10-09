@@ -38,7 +38,7 @@
             "name": "HIMUNG.ID",
             "url": "https://himung.id/",
             "logo": "https://himung.id/assets/icons/favicon.svg",
-            "email": "wajibhimung@gmail.com",
+            "email": "wibowo@himung.id",
             "description": "Pengembang aplikasi pendidikan untuk membantu administrasi guru, siswa, kegiatan PKL, dan sekolah."
           },
           {
@@ -78,7 +78,7 @@
     <a class="skip-link" href="#main">Lewati ke konten</a>
     <header class="site-header">
       <nav class="nav-shell" aria-label="Navigasi utama">
-        <a class="brand-lockup" href="index.html" aria-label="Beranda HIMUNG.ID" data-logo>
+        <a class="brand-lockup" href="./" aria-label="Beranda HIMUNG.ID" data-logo>
           <span class="brand-mark" aria-hidden="true"><i></i></span>
           <span><strong>HIMUNG.ID</strong><small>by Wajib Himung</small></span>
         </a>
@@ -86,7 +86,7 @@
           <span class="sr-only">Buka menu</span><span></span><span></span><span></span>
         </button>
         <div class="nav-menu" id="site-menu" data-menu>
-          <a class="active" href="index.html">Beranda</a>
+          <a class="active" href="./" aria-current="page">Beranda</a>
           <a href="aplikasi/">Produk</a>
           <a href="lab/">Lab</a>
           <a href="tentang/">Tentang</a>
@@ -133,9 +133,13 @@
             <div><strong>Akses tersedia</strong><span>melalui web dan Google Play</span></div>
           </div>
           <div class="product-grid" data-products></div>
+          <noscript>
+            <p>JavaScript diperlukan untuk menampilkan pratinjau. Halaman produk tetap dapat dibuka melalui tautan berikut:</p>
+            <ul><li><a href="aplikasi/jurnalku/">JurnalKu</a></li><li><a href="aplikasi/jurnal-pkl/">Jurnal PKL</a></li><li><a href="aplikasi/rpp-studio/">RPP Studio</a></li><li><a href="aplikasi/jurnal-guru-wali/">Jurnal Guru Wali</a></li></ul>
+          </noscript>
           <div class="product-adoption reveal">
             <div><strong>Butuh produk untuk sekolah Anda?</strong><span>Kami terbuka untuk penggunaan, penerapan, dan pengembangan sesuai kebutuhan sekolah.</span></div>
-            <a class="btn btn-secondary" href="mailto:wajibhimung@gmail.com?subject=Adopsi%20Produk%20HIMUNG.ID">Diskusikan Adopsi <span aria-hidden="true">&rarr;</span></a>
+            <a class="btn btn-secondary" href="mailto:wibowo@himung.id?subject=Adopsi%20Produk%20HIMUNG.ID">Diskusikan Adopsi <span aria-hidden="true">&rarr;</span></a>
           </div>
         </div>
       </section>
@@ -144,15 +148,15 @@
           <div class="section-heading compact reveal"><h2 id="audience-title">HIMUNG.ID untuk Semua <span aria-hidden="true">&#9825;</span></h2></div>
           <div class="audience-grid">
             <article class="audience-card reveal" id="guru">
-              <img src="assets/illustrations/teacher-card.svg" alt="Ilustrasi guru dengan catatan pembelajaran" loading="lazy" />
+              <img src="assets/illustrations/teacher-card.svg" alt="Ilustrasi guru dengan catatan pembelajaran" width="420" height="260" loading="lazy" />
               <h3>Untuk Guru</h3><p>Tools sederhana untuk membantu pekerjaan sehari-hari agar lebih efisien dan menyenangkan.</p>
             </article>
             <article class="audience-card reveal" id="siswa">
-              <img src="assets/illustrations/student-card.svg" alt="Ilustrasi siswa dengan smartphone" loading="lazy" />
+              <img src="assets/illustrations/student-card.svg" alt="Ilustrasi siswa dengan smartphone" width="420" height="260" loading="lazy" />
               <h3>Untuk Siswa</h3><p>Aplikasi yang membantu aktivitas belajar, praktik, dan pengembangan diri.</p>
             </article>
             <article class="audience-card reveal">
-              <img src="assets/illustrations/school-card.svg" alt="Ilustrasi gedung sekolah" loading="lazy" />
+              <img src="assets/illustrations/school-card.svg" alt="Ilustrasi gedung sekolah" width="420" height="260" loading="lazy" />
               <h3>Untuk Sekolah</h3><p>Solusi digital sederhana untuk mendukung pengelolaan dan layanan pendidikan.</p>
             </article>
           </div>
@@ -195,7 +199,7 @@
     </main>
     <footer class="site-footer">
       <div class="container footer-grid">
-        <a class="brand-lockup footer-brand" href="index.html" aria-label="Kembali ke beranda"><span class="brand-mark" aria-hidden="true"><i></i></span><span><strong>HIMUNG.ID</strong><small>by Wajib Himung</small></span></a>
+        <a class="brand-lockup footer-brand" href="./" aria-label="Kembali ke beranda"><span class="brand-mark" aria-hidden="true"><i></i></span><span><strong>HIMUNG.ID</strong><small>by Wajib Himung</small></span></a>
         <p class="footer-philosophy">Ilmu dan teknologi hanyalah alat,<br />yang membuatnya bermanfaat adalah <strong>akhlak.</strong></p>
         <p class="footer-tagline">Teknologi sederhana untuk pendidikan yang lebih mudah.</p>
         <p class="copyright">&copy; 2026 HIMUNG.ID<br /><small>All rights reserved.</small></p>
@@ -215,6 +219,7 @@
     </dialog>
     <div class="toast" role="status" aria-live="polite" data-toast>Semangat!</div>
     <script src="js/products.js" defer></script>
+    <script src="js/site-shell.js" defer></script>
     <script src="js/main.js" defer></script>
   </body>
 </html>

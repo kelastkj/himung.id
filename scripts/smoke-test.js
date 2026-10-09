@@ -1,6 +1,8 @@
+const path = require("path");
 const { chromium } = require("playwright");
 
 async function run() {
+  const baseUrl = process.env.SMOKE_BASE_URL || "http://127.0.0.1:4173";
   const launchOptions = { headless: true };
   if (process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH) {
     launchOptions.executablePath = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH;
@@ -23,7 +25,7 @@ async function run() {
     });
     page.on("pageerror", (error) => errors.push(error.message));
 
-    const response = await page.goto("http://127.0.0.1:4173", {
+    const response = await page.goto(baseUrl, {
       waitUntil: "networkidle",
     });
     const imageCount = await page.locator("img").count();
@@ -81,7 +83,7 @@ async function run() {
     });
 
     await page.screenshot({
-      path: `D:/himung.id/assets/images/smoke-${viewport.name}.png`,
+      path: path.join(__dirname, "..", "assets", "images", `smoke-${viewport.name}.png`),
       fullPage: true,
     });
     results.push(result);

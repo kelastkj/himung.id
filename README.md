@@ -55,6 +55,7 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework sehingga ri
 |-- assets/
 |   |-- icons/
 |   |-- illustrations/
+|   |-- images/
 |   `-- screenshots/
 |-- css/
 |   |-- styles.css
@@ -62,10 +63,13 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework sehingga ri
 |   `-- product-detail.css
 |-- js/
 |   |-- products.js
+|   |-- site-shell.js
 |   |-- main.js
 |   |-- lab.js
 |   |-- site-page.js
 |   `-- product-detail.js
+|-- scripts/
+|   `-- smoke-test.js
 |-- robots.txt
 `-- sitemap.xml
 ```
@@ -82,6 +86,13 @@ Kemudian buka `http://localhost:4173`.
 
 Penggunaan server lokal disarankan agar URL direktori, pemuatan aset, dan halaman detail bekerja seperti pada hosting produksi.
 
+Sebagai alternatif, jika Node.js tersedia:
+
+```bash
+npm install
+npm run serve
+```
+
 ## Mengelola Konten Produk
 
 Data seluruh produk berada di `js/products.js`. Beranda, katalog, dialog pratinjau, dan halaman detail menggunakan sumber data yang sama agar informasi tetap konsisten.
@@ -93,8 +104,21 @@ Untuk memperbarui produk:
 3. Daftarkan gambar melalui properti `screenshots` pada produk terkait.
 4. Perbarui metadata halaman detail dan `sitemap.xml` jika menambahkan produk baru.
 
+## Pengujian
+
+Pemeriksaan tampilan dan aset dasar menggunakan Playwright. Ini alat bantu pengembangan, bukan bagian dari situs produksi.
+
+```bash
+npm install
+npx playwright install chromium
+npm run serve
+npm run smoke
+```
+
+Skrip membuka beranda pada tampilan mobile dan desktop, memeriksa status HTTP, jumlah kartu produk, gambar yang gagal dimuat, dan galat konsol, lalu menyimpan tangkapan layar ke `assets/images/smoke-*.png`. Alamat server dapat diubah melalui variabel lingkungan `SMOKE_BASE_URL`.
+
 ## Publikasi
 
 Repository dapat dipublikasikan melalui GitHub Pages atau layanan hosting statis lainnya. Domain produksi yang digunakan adalah [himung.id](https://himung.id/).
 
-Untuk pertanyaan penggunaan atau penerapan produk, hubungi [wajibhimung@gmail.com](mailto:wajibhimung@gmail.com).
+Untuk pertanyaan penggunaan atau penerapan produk, hubungi [wibowo@himung.id](mailto:wibowo@himung.id).
