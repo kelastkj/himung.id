@@ -34,12 +34,16 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework. Header dan
 - Navigasi mobile, animasi masuk, dan dukungan preferensi reduced motion.
 - Metadata SEO, Open Graph, data terstruktur JSON-LD, `robots.txt`, dan `sitemap.xml`.
 - URL katalog `/aplikasi/` yang dapat diakses langsung tanpa bergantung pada fragmen beranda.
+- Identitas visual konsisten: mark smiley sebagai favicon dan ikon aplikasi (`site.webmanifest`).
+- Halaman 404 kustom yang menampilkan mark HIMUNG.ID.
+- Panduan identitas ringkas pada `BRAND.md`.
 
 ## Struktur Proyek
 
 ```text
 /
 |-- index.html
+|-- 404.html
 |-- aplikasi/
 |   |-- index.html
 |   |-- jurnalku/
@@ -53,6 +57,7 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework. Header dan
 |-- kontak/
 |   `-- index.html
 |-- partials/
+|   |-- head.html
 |   |-- header.html
 |   `-- footer.html
 |-- assets/
@@ -73,11 +78,14 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework. Header dan
 |   `-- product-detail.js
 |-- scripts/
 |   |-- build.js
+|   |-- build-icons.js
 |   |-- link-check.js
 |   |-- optimize-images.js
 |   `-- smoke-test.js
 |-- .github/workflows/ci.yml
+|-- BRAND.md
 |-- package.json
+|-- site.webmanifest
 |-- robots.txt
 `-- sitemap.xml
 ```
@@ -90,7 +98,7 @@ Header dan footer seluruh halaman dihasilkan dari `partials/header.html` dan `pa
 npm run build
 ```
 
-Skrip `scripts/build.js` menulis ulang blok `<header>` dan `<footer>` di setiap halaman, termasuk penanda kelas aktif (`class="active"` dan `aria-current="page"`). Jangan menyunting blok tersebut langsung di file HTML karena akan ditimpa saat build. Skrip juga menambahkan parameter versi `?v=<hash>` pada referensi CSS, JS, dan SVG sebagai cache-busting agar perubahan aset tidak tertahan cache di GitHub Pages.
+Skrip `scripts/build.js` menulis ulang blok `<header>` dan `<footer>` di setiap halaman, termasuk penanda kelas aktif (`class="active"` dan `aria-current="page"`). Blok ikon pada `<head>` (favicon, apple-touch-icon, dan manifest) juga berasal dari `partials/head.html`. Jangan menyunting blok tersebut langsung di file HTML karena akan ditimpa saat build. Skrip juga menambahkan parameter versi `?v=<hash>` pada referensi CSS, JS, dan SVG sebagai cache-busting agar perubahan aset tidak tertahan cache di GitHub Pages.
 
 HTML hasil build disimpan di repositori sehingga GitHub Pages tetap menyajikan dari root tanpa konfigurasi tambahan. CI menjalankan `npm run build:check` untuk memastikan HTML tidak menyimpang dari partial.
 

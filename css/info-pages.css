@@ -86,6 +86,7 @@
 .info-cta-panel h2 { font-size: 1.65rem; }
 .info-cta-panel p { margin: 7px 0 0; font-size: .68rem; }
 .info-cta-panel .btn { flex: 0 0 auto; }
+.notfound-mark { display: block; width: 88px; height: 88px; margin-bottom: 14px; animation: hero-float 5s ease-in-out infinite; }
 
 @media (max-width: 860px) {
   .info-hero-copy { width: 72%; padding: 38px; }

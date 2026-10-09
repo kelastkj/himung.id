@@ -41,6 +41,7 @@ for (const dir of ["css", "js", "assets"]) {
 
 const headerPartial = fs.readFileSync(path.join(root, "partials", "header.html"), "utf8").trimEnd();
 const footerPartial = fs.readFileSync(path.join(root, "partials", "footer.html"), "utf8").trimEnd();
+const headPartial = fs.readFileSync(path.join(root, "partials", "head.html"), "utf8").trimEnd();
 
 function activeFor(rel) {
   if (rel === "index.html") return "beranda";
@@ -78,11 +79,13 @@ for (const file of pages) {
   header = markActive(header, active);
 
   let footer = footerPartial.split("{{base}}").join(base);
+  const icons = headPartial.split("{{base}}").join(base);
 
   const original = fs.readFileSync(file, "utf8");
   let output = original;
   output = output.replace(/[ \t]*<header class="site-header">[\s\S]*?<\/header>/, header);
   output = output.replace(/[ \t]*<footer class="site-footer">[\s\S]*?<\/footer>/, footer);
+  output = output.replace(/[ \t]*<link rel="icon"[^>]*>(?:\s*<link rel="apple-touch-icon"[^>]*>)?(?:\s*<link rel="manifest"[^>]*>)?/, icons);
   output = output.replace(/(href|src)="([^"]+?)\.(css|js|svg)(\?[^"]*)?"/g, (full, attr, stem, ext, query) => {
     const url = `${stem}.${ext}`;
     if (/^[a-z][a-z0-9+.-]*:/i.test(url) || url.startsWith("//")) return full;

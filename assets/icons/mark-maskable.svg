@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="HIMUNG.ID">
+  <rect width="64" height="64" fill="#ffdc19" />
+  <circle cx="23.5" cy="26" r="4.6" fill="#101010" />
+  <circle cx="40.5" cy="26" r="4.6" fill="#101010" />
+  <path d="M19 35c3.7 6.6 22.3 6.6 26 0" fill="none" stroke="#101010" stroke-width="5.4" stroke-linecap="round" />
+</svg>

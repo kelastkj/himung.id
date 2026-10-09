@@ -11,6 +11,7 @@
     "build:check": "node scripts/build.js --check",
     "check:links": "node scripts/link-check.js",
     "check:html": "html-validate \"**/*.html\"",
+    "build:icons": "node scripts/build-icons.js",
     "optimize:images": "node scripts/optimize-images.js",
     "serve": "http-server -p 4173 -c-1",
     "smoke": "node scripts/smoke-test.js"
