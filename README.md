@@ -2,7 +2,7 @@
 
 Website resmi HIMUNG.ID untuk memperkenalkan produk aplikasi pendidikan yang dapat digunakan oleh guru, siswa, dan sekolah. Situs ini memuat katalog produk, rincian fitur, tangkapan layar aplikasi, kanal akses resmi, serta informasi penerapan produk di sekolah.
 
-Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework sehingga ringan dan dapat dipublikasikan sebagai situs statis.
+Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework. Header dan footer dibagikan lewat partial dan disatukan oleh skrip build Node sederhana, sehingga tetap ringan dan dapat dipublikasikan sebagai situs statis.
 
 ## Produk
 
@@ -52,6 +52,9 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework sehingga ri
 |   `-- index.html
 |-- kontak/
 |   `-- index.html
+|-- partials/
+|   |-- header.html
+|   `-- footer.html
 |-- assets/
 |   |-- icons/
 |   |-- illustrations/
@@ -69,10 +72,28 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework sehingga ri
 |   |-- site-page.js
 |   `-- product-detail.js
 |-- scripts/
+|   |-- build.js
+|   |-- link-check.js
+|   |-- optimize-images.js
 |   `-- smoke-test.js
+|-- .github/workflows/ci.yml
+|-- package.json
 |-- robots.txt
 `-- sitemap.xml
 ```
+
+## Build dan Partial
+
+Header dan footer seluruh halaman dihasilkan dari `partials/header.html` dan `partials/footer.html`. Untuk mengubah navigasi atau footer, sunting partial lalu jalankan:
+
+```bash
+npm run build
+```
+
+Skrip `scripts/build.js` menulis ulang blok `<header>` dan `<footer>` di setiap halaman, termasuk penanda kelas aktif (`class="active"` dan `aria-current="page"`). Jangan menyunting blok tersebut langsung di file HTML karena akan ditimpa saat build. Skrip juga menambahkan parameter versi `?v=<hash>` pada referensi CSS, JS, dan SVG sebagai cache-busting agar perubahan aset tidak tertahan cache di GitHub Pages.
+
+HTML hasil build disimpan di repositori sehingga GitHub Pages tetap menyajikan dari root tanpa konfigurasi tambahan. CI menjalankan `npm run build:check` untuk memastikan HTML tidak menyimpang dari partial.
+
 
 ## Menjalankan Secara Lokal
 
@@ -104,18 +125,34 @@ Untuk memperbarui produk:
 3. Daftarkan gambar melalui properti `screenshots` pada produk terkait.
 4. Perbarui metadata halaman detail dan `sitemap.xml` jika menambahkan produk baru.
 
-## Pengujian
+## Pemeriksaan dan Pengujian
 
-Pemeriksaan tampilan dan aset dasar menggunakan Playwright. Ini alat bantu pengembangan, bukan bagian dari situs produksi.
+Pemeriksaan statis dijalankan dengan Node.js:
 
 ```bash
 npm install
+npm run build:check   # HTML sinkron dengan partial
+npm run check:links   # tautan dan aset internal valid
+npm run check:html    # validasi HTML dengan html-validate
+```
+
+Pemeriksaan tampilan menggunakan Playwright:
+
+```bash
 npx playwright install chromium
 npm run serve
 npm run smoke
 ```
 
 Skrip membuka beranda pada tampilan mobile dan desktop, memeriksa status HTTP, jumlah kartu produk, gambar yang gagal dimuat, dan galat konsol, lalu menyimpan tangkapan layar ke `assets/images/smoke-*.png`. Alamat server dapat diubah melalui variabel lingkungan `SMOKE_BASE_URL`.
+
+Optimasi gambar tangkapan layar (JPG ukuran penuh untuk lightbox dan WebP untuk galeri):
+
+```bash
+npm run optimize:images
+```
+
+Seluruh langkah di atas dijalankan otomatis melalui GitHub Actions pada `.github/workflows/ci.yml` untuk setiap push dan pull request.
 
 ## Publikasi
 
