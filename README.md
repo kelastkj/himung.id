@@ -136,6 +136,8 @@ npm run check:links   # tautan dan aset internal valid
 npm run check:html    # validasi HTML dengan html-validate
 ```
 
+Pemeriksaan statis memerlukan Node.js 22 atau lebih baru (html-validate memakai API glob Node 22+).
+
 Pemeriksaan tampilan menggunakan Playwright:
 
 ```bash

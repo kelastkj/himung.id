@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - run: npm ci
       - name: Verifikasi HTML sinkron dengan partial
@@ -23,9 +23,11 @@ jobs:
         run: npm run check:html
       - name: Pasang Chromium untuk Playwright
         run: npx playwright install --with-deps chromium
-      - name: Jalankan server statis
-        run: npx http-server -p 4173 -c-1 &
       - name: Smoke test
         run: |
-          sleep 2
+          npx http-server -p 4173 -c-1 > /dev/null 2>&1 &
+          for i in $(seq 1 20); do
+            curl -sf http://127.0.0.1:4173 > /dev/null && break
+            sleep 1
+          done
           npm run smoke
