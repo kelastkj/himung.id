@@ -2,9 +2,12 @@ const { products, icons } = window.HimungCatalog;
 const { revealObserver } = window.HimungShell;
 const productGrid = document.querySelector("[data-products]");
 const productBase = document.body.dataset.productBase || "aplikasi";
+const gridProducts = productGrid?.hasAttribute("data-home")
+  ? products.filter((product) => !product.hideOnHome)
+  : products;
 
 if (productGrid) {
-  productGrid.innerHTML = products.map((product, index) => `
+  productGrid.innerHTML = gridProducts.map((product, index) => `
     <article class="product-card reveal" style="--product-color:${product.color};--product-accent:${product.accent}">
       <div class="product-visual"><div class="product-icon">${icons[product.icon]}</div><div><h3>${product.name}</h3><p><strong>${product.subtitle}</strong></p></div></div>
       <div class="product-meta"><span class="badge">${product.category}</span><span class="product-availability"><i aria-hidden="true"></i>${product.availability}</span></div>
@@ -26,7 +29,7 @@ const renderFeatures = (product) => product.featureGroups.map((group) => `
 `).join("");
 
 const openProductDialog = (index, trigger) => {
-  const product = products[index];
+  const product = gridProducts[index];
   if (!product || !productDialog) return;
   lastDialogTrigger = trigger;
   productDialog.style.setProperty("--dialog-color", product.color);

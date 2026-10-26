@@ -59,6 +59,7 @@
     },
     {
       slug: "rpp-studio",
+      hideOnHome: true,
       name: "RPP Studio",
       category: "Guru / Perencanaan Pembelajaran",
       availability: "Dapat diakses melalui web",
