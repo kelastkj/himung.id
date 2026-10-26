@@ -116,7 +116,15 @@
         { title: "Pengaturan dan identitas", items: ["Pengaturan ujian bisa diubah kapan saja.", "Pasang logo dan slogan penyelenggara pada tampilan yang dilihat siswa.", "Kuota perangkat menyesuaikan paket yang dipakai sekolah."] }
       ],
       links: [{ label: "Buka AegisExam", url: "https://aegis.himung.id/" }, { label: "Unduh di Google Play", url: "https://play.google.com/store/apps/details?id=id.himung.aegis" }],
-      screenshots: []
+      screenshots: [],
+      videos: [
+        { src: "assets/videos/aegis-exam/promo.mp4", poster: "assets/videos/aegis-exam/promo.jpg", title: "Promo AegisExam", tag: "Promo", duration: "0:35", alt: "Video promo AegisExam", caption: "Gambaran singkat ujian dengan layar terkunci." },
+        { src: "assets/videos/aegis-exam/promo-pov.mp4", poster: "assets/videos/aegis-exam/promo-pov.jpg", title: "Promo POV peserta", tag: "Promo", duration: "0:31", alt: "Video promo sudut pandang peserta AegisExam", caption: "Ujian dilihat dari sisi siswa yang mengerjakan." },
+        { src: "assets/videos/aegis-exam/tutorial-peserta.mp4", poster: "assets/videos/aegis-exam/tutorial-peserta.jpg", title: "Tutorial peserta", tag: "Siswa", duration: "1:13", alt: "Tutorial peserta ujian AegisExam", caption: "Memasukkan token lalu mengerjakan ujian di aplikasi Android." },
+        { src: "assets/videos/aegis-exam/tutorial-guru.mp4", poster: "assets/videos/aegis-exam/tutorial-guru.jpg", title: "Tutorial guru", tag: "Guru", duration: "1:03", alt: "Tutorial guru menyiapkan ujian di AegisExam", caption: "Membuat ujian, mengatur jadwal, lalu membagikan token." },
+        { src: "assets/videos/aegis-exam/iphone-seb.mp4", poster: "assets/videos/aegis-exam/iphone-seb.jpg", title: "iPhone dan iPad", tag: "Perangkat Apple", duration: "0:53", alt: "Ujian AegisExam di iPhone dan iPad dengan Safe Exam Browser", caption: "Membuka ujian yang sama dalam mode terkunci lewat Safe Exam Browser." },
+        { src: "assets/videos/aegis-exam/branding-sekolah.mp4", poster: "assets/videos/aegis-exam/branding-sekolah.jpg", title: "Branding sekolah", tag: "Sekolah", duration: "0:51", alt: "Pengaturan branding sekolah pada AegisExam", caption: "Memasang logo dan slogan penyelenggara pada tampilan peserta." }
+      ]
     }
   ];
 

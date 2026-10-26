@@ -31,7 +31,7 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework. Header dan
 
 - Desain responsif untuk perangkat mobile, tablet, dan desktop.
 - Katalog produk dengan status ketersediaan dan akses resmi.
-- Halaman detail berisi manfaat, kelompok fitur, platform, dan galeri tangkapan layar.
+- Halaman detail berisi manfaat, kelompok fitur, platform, galeri tangkapan layar, dan video produk.
 - Dialog pratinjau produk pada beranda dan halaman katalog.
 - Navigasi mobile, animasi masuk, dan dukungan preferensi reduced motion.
 - Metadata SEO, Open Graph, data terstruktur JSON-LD, `robots.txt`, dan `sitemap.xml`.
@@ -67,7 +67,8 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework. Header dan
 |   |-- icons/
 |   |-- illustrations/
 |   |-- images/
-|   `-- screenshots/
+|   |-- screenshots/
+|   `-- videos/
 |-- css/
 |   |-- styles.css
 |   |-- info-pages.css
@@ -134,7 +135,8 @@ Untuk memperbarui produk:
 1. Ubah informasi dasar, status ketersediaan, platform, fitur, dan tautan pada `js/products.js`.
 2. Simpan tangkapan layar versi WebP dan sumber beresolusi tinggi di `assets/screenshots/<slug-produk>/`.
 3. Daftarkan gambar melalui properti `screenshots` pada produk terkait.
-4. Perbarui metadata halaman detail dan `sitemap.xml` jika menambahkan produk baru.
+4. Simpan video produk beserta poster `.jpg` di `assets/videos/<slug-produk>/`, lalu daftarkan melalui properti `videos`.
+5. Perbarui metadata halaman detail dan `sitemap.xml` jika menambahkan produk baru.
 
 ## Pemeriksaan dan Pengujian
 

@@ -107,6 +107,94 @@ if (!product) {
     });
   }
 
+  const videoSection = document.querySelector("[data-video-section]");
+  if (videoSection && product.videos?.length) {
+    videoSection.hidden = false;
+    const videoWrap = document.querySelector("[data-videos]");
+    const videoHeading = videoSection.querySelector(".detail-section-heading");
+    videoHeading.classList.add("gallery-heading");
+    videoHeading.insertAdjacentHTML("beforeend", `
+      <div class="gallery-tools">
+        <span>${product.videos.length} video</span>
+        <div class="gallery-controls" aria-label="Navigasi video">
+          <button type="button" data-video-prev aria-label="Video sebelumnya" title="Video sebelumnya">&larr;</button>
+          <button type="button" data-video-next aria-label="Video berikutnya" title="Video berikutnya">&rarr;</button>
+        </div>
+      </div>
+    `);
+    videoWrap.innerHTML = product.videos.map((video, index) => `
+      <figure class="video-card">
+        <button class="video-open" type="button" data-video-index="${index}" aria-label="Putar video ${video.title}">
+          <span class="video-frame">
+            <img src="../../${video.poster}" alt="${video.alt}" width="720" height="1280" loading="lazy" />
+            <span class="video-play" aria-hidden="true"></span>
+            <span class="video-badge">${video.duration}</span>
+          </span>
+        </button>
+        <figcaption><span>${video.tag}</span><strong>${video.title}</strong><p>${video.caption}</p></figcaption>
+      </figure>
+    `).join("");
+
+    const scrollVideos = (direction) => videoWrap.scrollBy({ left: direction * videoWrap.clientWidth * 0.78, behavior: "smooth" });
+    videoHeading.querySelector("[data-video-prev]").addEventListener("click", () => scrollVideos(-1));
+    videoHeading.querySelector("[data-video-next]").addEventListener("click", () => scrollVideos(1));
+
+    const videoDialog = document.createElement("dialog");
+    videoDialog.className = "screenshot-dialog video-dialog";
+    videoDialog.innerHTML = `
+      <div class="screenshot-dialog-panel">
+        <div class="screenshot-dialog-bar">
+          <div><span data-dialog-tag></span><strong data-dialog-title></strong></div>
+          <button type="button" data-dialog-close aria-label="Tutup video" title="Tutup">&times;</button>
+        </div>
+        <div class="screenshot-dialog-stage">
+          <button type="button" data-dialog-prev aria-label="Video sebelumnya" title="Video sebelumnya">&larr;</button>
+          <video data-dialog-video controls playsinline preload="metadata"></video>
+          <button type="button" data-dialog-next aria-label="Video berikutnya" title="Video berikutnya">&rarr;</button>
+        </div>
+        <p data-dialog-caption></p>
+      </div>
+    `;
+    document.body.appendChild(videoDialog);
+    let activeVideo = 0;
+
+    const showVideo = (index) => {
+      activeVideo = (index + product.videos.length) % product.videos.length;
+      const video = product.videos[activeVideo];
+      const element = videoDialog.querySelector("[data-dialog-video]");
+      element.src = `../../${video.src}`;
+      element.poster = `../../${video.poster}`;
+      videoDialog.querySelector("[data-dialog-tag]").textContent = video.tag;
+      videoDialog.querySelector("[data-dialog-title]").textContent = video.title;
+      videoDialog.querySelector("[data-dialog-caption]").textContent = video.caption;
+      element.play().catch(() => {});
+    };
+
+    videoWrap.querySelectorAll("[data-video-index]").forEach((button) => {
+      button.addEventListener("click", () => {
+        showVideo(Number(button.dataset.videoIndex));
+        videoDialog.showModal();
+      });
+    });
+    videoDialog.querySelector("[data-dialog-close]").addEventListener("click", () => videoDialog.close());
+    videoDialog.querySelector("[data-dialog-prev]").addEventListener("click", () => showVideo(activeVideo - 1));
+    videoDialog.querySelector("[data-dialog-next]").addEventListener("click", () => showVideo(activeVideo + 1));
+    videoDialog.addEventListener("click", (event) => {
+      if (event.target === videoDialog) videoDialog.close();
+    });
+    videoDialog.addEventListener("keydown", (event) => {
+      if (event.target.closest("video")) return;
+      if (event.key === "ArrowLeft") showVideo(activeVideo - 1);
+      if (event.key === "ArrowRight") showVideo(activeVideo + 1);
+    });
+    videoDialog.addEventListener("close", () => {
+      const element = videoDialog.querySelector("[data-dialog-video]");
+      element.pause();
+      element.removeAttribute("src");
+      element.load();
+    });
+  }
+
   const previous = products[productIndex - 1];
   const next = products[productIndex + 1];
   const productNavigation = document.querySelector("[data-product-navigation]");

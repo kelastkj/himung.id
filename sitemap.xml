@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://himung.id/</loc>
     <lastmod>2026-10-09</lastmod>
@@ -83,5 +84,47 @@
       <image:loc>https://himung.id/assets/images/seo/og-aegis-exam.jpg</image:loc>
       <image:title>AegisExam, aplikasi ujian online dengan layar terkunci</image:title>
     </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://himung.id/assets/videos/aegis-exam/promo.jpg</video:thumbnail_loc>
+      <video:title>Promo AegisExam</video:title>
+      <video:description>Gambaran singkat ujian dengan layar terkunci.</video:description>
+      <video:content_loc>https://himung.id/assets/videos/aegis-exam/promo.mp4</video:content_loc>
+      <video:duration>35</video:duration>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://himung.id/assets/videos/aegis-exam/promo-pov.jpg</video:thumbnail_loc>
+      <video:title>Promo POV peserta</video:title>
+      <video:description>Ujian dilihat dari sisi siswa yang mengerjakan.</video:description>
+      <video:content_loc>https://himung.id/assets/videos/aegis-exam/promo-pov.mp4</video:content_loc>
+      <video:duration>31</video:duration>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://himung.id/assets/videos/aegis-exam/tutorial-peserta.jpg</video:thumbnail_loc>
+      <video:title>Tutorial peserta</video:title>
+      <video:description>Memasukkan token lalu mengerjakan ujian di aplikasi Android.</video:description>
+      <video:content_loc>https://himung.id/assets/videos/aegis-exam/tutorial-peserta.mp4</video:content_loc>
+      <video:duration>73</video:duration>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://himung.id/assets/videos/aegis-exam/tutorial-guru.jpg</video:thumbnail_loc>
+      <video:title>Tutorial guru</video:title>
+      <video:description>Membuat ujian, mengatur jadwal, lalu membagikan token.</video:description>
+      <video:content_loc>https://himung.id/assets/videos/aegis-exam/tutorial-guru.mp4</video:content_loc>
+      <video:duration>63</video:duration>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://himung.id/assets/videos/aegis-exam/iphone-seb.jpg</video:thumbnail_loc>
+      <video:title>iPhone dan iPad dengan Safe Exam Browser</video:title>
+      <video:description>Membuka ujian yang sama dalam mode terkunci lewat Safe Exam Browser.</video:description>
+      <video:content_loc>https://himung.id/assets/videos/aegis-exam/iphone-seb.mp4</video:content_loc>
+      <video:duration>53</video:duration>
+    </video:video>
+    <video:video>
+      <video:thumbnail_loc>https://himung.id/assets/videos/aegis-exam/branding-sekolah.jpg</video:thumbnail_loc>
+      <video:title>Branding sekolah</video:title>
+      <video:description>Memasang logo dan slogan penyelenggara pada tampilan peserta.</video:description>
+      <video:content_loc>https://himung.id/assets/videos/aegis-exam/branding-sekolah.mp4</video:content_loc>
+      <video:duration>51</video:duration>
+    </video:video>
   </url>
 </urlset>
