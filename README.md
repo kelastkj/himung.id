@@ -12,6 +12,7 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework. Header dan
 | Jurnal PKL | Pengelolaan PKL, presensi GPS, jurnal siswa, kegiatan guru, monitoring, penilaian rapor, dan layanan WhatsApp | [SMKN 1 Telagasari](https://play.google.com/store/apps/details?id=id.sch.smkn1telagasari.jurnal_pkl.twa) / [SMKN 2 Marabahan](https://play.google.com/store/apps/details?id=id.sch.smkn2marabahan.jurnal_pkl) |
 | RPP Studio | Penyusunan Perencanaan Pembelajaran Mendalam, pratinjau A4, dan ekspor PDF atau Word | [Buka aplikasi](https://rpm.smkn1telagasari.sch.id/) |
 | Jurnal Guru Wali | Jurnal pendampingan, pemantauan siswa, tindak lanjut, rekap, serta laporan PDF dan Excel | [Buka aplikasi](https://guruwali.jurnalkuaja.web.id/) |
+| AegisExam | Ujian online dengan layar terkunci, token, pemantauan perangkat, dan opsi Safe Exam Browser | [aegis.himung.id](https://aegis.himung.id/) |
 
 ## Halaman
 
@@ -21,6 +22,7 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework. Header dan
 - `/aplikasi/jurnal-pkl/` - detail Jurnal PKL
 - `/aplikasi/rpp-studio/` - detail RPP Studio
 - `/aplikasi/jurnal-guru-wali/` - detail Jurnal Guru Wali
+- `/aplikasi/aegis-exam/` - detail AegisExam
 - `/lab/` - eksperimen aplikasi, AI, sistem offline, home server, dan self-hosting
 - `/tentang/` - cerita, prinsip, dan cara kerja HIMUNG.ID
 - `/kontak/` - kontak penggunaan produk, penerapan sekolah, dan ide Lab
@@ -49,7 +51,8 @@ Situs dibangun menggunakan HTML, CSS, dan JavaScript tanpa framework. Header dan
 |   |-- jurnalku/
 |   |-- jurnal-pkl/
 |   |-- rpp-studio/
-|   `-- jurnal-guru-wali/
+|   |-- jurnal-guru-wali/
+|   `-- aegis-exam/
 |-- lab/
 |   `-- index.html
 |-- tentang/

@@ -76,4 +76,12 @@
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnal-guru-wali/pendampingan-individual.jpg</image:loc><image:title>Catatan pendampingan individual siswa</image:title></image:image>
     <image:image><image:loc>https://himung.id/assets/screenshots/jurnal-guru-wali/laporan-pdf.jpg</image:loc><image:title>Laporan resmi Jurnal Guru Wali</image:title></image:image>
   </url>
+  <url>
+    <loc>https://himung.id/aplikasi/aegis-exam/</loc>
+    <lastmod>2026-10-26</lastmod>
+    <image:image>
+      <image:loc>https://himung.id/assets/images/seo/og-aegis-exam.jpg</image:loc>
+      <image:title>AegisExam, aplikasi ujian online dengan layar terkunci</image:title>
+    </image:image>
+  </url>
 </urlset>

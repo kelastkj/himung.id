@@ -98,6 +98,25 @@
         { src: "assets/screenshots/jurnal-guru-wali/pendampingan-individual.webp", full: "assets/screenshots/jurnal-guru-wali/pendampingan-individual.jpg", title: "Pendampingan individual", tag: "Siswa", alt: "Form pendampingan individual siswa pada Jurnal Guru Wali", caption: "Catat aspek akademik, karakter, sosial emosional, kedisiplinan, kompetensi, dan tindak lanjut." },
         { src: "assets/screenshots/jurnal-guru-wali/laporan-pdf.webp", full: "assets/screenshots/jurnal-guru-wali/laporan-pdf.jpg", title: "Laporan resmi", tag: "Laporan", alt: "Pratinjau laporan PDF Jurnal Guru Wali", caption: "Hasilkan rekap per siswa, laporan semester, dan dokumentasi pendampingan dalam format formal." }
       ]
+    },
+    {
+      slug: "aegis-exam",
+      name: "AegisExam",
+      category: "Sekolah / Ujian",
+      availability: "Tersedia di web dan Google Play",
+      subtitle: "Ujian online dengan layar terkunci",
+      description: "Buat ujian, bagikan satu token, lalu siswa mengerjakan lewat aplikasi Android yang mengunci layar. Perangkat yang masuk dan keluar terlihat dari panel web.",
+      summary: "AegisExam menggelar ujian dengan layar HP siswa tetap terkunci. Soal bisa ditempel dari Google Form atau e-learning, token dibuat otomatis dan bisa diganti, dan siswa membukanya dari aplikasi Android AegisExam. Dari panel web, Anda melihat perangkat yang masuk dan keluar selama ujian. Siswa yang membawa iPhone atau iPad tetap ikut lewat Safe Exam Browser.",
+      color: "#0F766E", accent: "#7FD9CE", icon: "shield",
+      platforms: ["Web", "Android", "Layar terkunci", "Safe Exam Browser"],
+      featureGroups: [
+        { title: "Menyiapkan ujian", items: ["Tempel tautan soal dari Google Form atau e-learning, lalu atur jadwalnya.", "Ujian hanya terbuka pada rentang waktu yang dipilih, dengan zona WIB, WITA, atau WIT.", "Token dibuat otomatis dan bisa diganti bila masa berlakunya habis atau siswa perlu masuk ulang."] },
+        { title: "Layar terkunci di perangkat siswa", items: ["Aplikasi Android AegisExam menahan siswa tetap di halaman ujian.", "Alarm berbunyi ketika siswa keluar dari mode ujian.", "Kode keluar disimpan sebagai hash, jadi tidak bisa dibaca dari aplikasi.", "Siswa dengan iPhone atau iPad membuka ujian yang sama lewat Safe Exam Browser."] },
+        { title: "Pemantauan dari panel web", items: ["Pantau perangkat yang masuk dan keluar selama ujian berlangsung.", "Tiap perangkat dikenali dari merek dan modelnya.", "Jumlah perangkat yang mengerjakan, selesai, dan perlu perhatian tampil sekilas.", "Penghitung waktu dan status ujian terlihat dari panel."] },
+        { title: "Pengaturan dan identitas", items: ["Pengaturan ujian bisa diubah kapan saja.", "Pasang logo dan slogan penyelenggara pada tampilan yang dilihat siswa.", "Kuota perangkat menyesuaikan paket yang dipakai sekolah."] }
+      ],
+      links: [{ label: "Buka AegisExam", url: "https://aegis.himung.id/" }, { label: "Unduh di Google Play", url: "https://play.google.com/store/apps/details?id=id.himung.aegis" }],
+      screenshots: []
     }
   ];
 
@@ -105,7 +124,8 @@
     document: '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" d="M13 6h16l8 8v28H13z"/><path fill="#FFD928" stroke="#111" stroke-width="4" stroke-linejoin="round" d="M29 6v10h9"/><path stroke="#111" stroke-width="4" stroke-linecap="round" d="M19 24h12M19 32h8"/></svg>',
     school: '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFD928" stroke="#111" stroke-width="4" stroke-linejoin="round" d="M6 21 24 10l18 11-18 11z"/><path fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" d="M13 25v12c6 4 16 4 22 0V25"/><path stroke="#111" stroke-width="4" stroke-linecap="round" d="M42 21v13"/></svg>',
     spark: '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFD928" stroke="#111" stroke-width="4" stroke-linejoin="round" d="m25 5 4 13 13 4-13 4-4 17-5-17-14-4 14-4z"/><path stroke="#111" stroke-width="4" stroke-linecap="round" d="M38 8v8M34 12h8"/></svg>',
-    guardian: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="17" r="8" fill="#FFD928" stroke="#111" stroke-width="4"/><circle cx="34" cy="20" r="6" fill="#FFB2D1" stroke="#111" stroke-width="4"/><path d="M5 41c1-9 6-14 13-14s12 5 13 14M27 31c7-2 13 2 15 10" fill="#fff" stroke="#111" stroke-width="4" stroke-linecap="round"/></svg>'
+    guardian: '<svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="18" cy="17" r="8" fill="#FFD928" stroke="#111" stroke-width="4"/><circle cx="34" cy="20" r="6" fill="#FFB2D1" stroke="#111" stroke-width="4"/><path d="M5 41c1-9 6-14 13-14s12 5 13 14M27 31c7-2 13 2 15 10" fill="#fff" stroke="#111" stroke-width="4" stroke-linecap="round"/></svg>',
+    shield: '<svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#7FD9CE" stroke="#111" stroke-width="4" stroke-linejoin="round" d="M24 6 11 10.4V22c0 8.6 5.4 14.4 13 17.6V6z"/><path fill="#fff" stroke="#111" stroke-width="4" stroke-linejoin="round" d="M24 6l13 4.4V22c0 8.6-5.4 14.4-13 17.6V6z"/><path stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="m17.4 24 4.6 4.6L30 20.2"/></svg>'
   };
 
   window.HimungCatalog = { products, icons };
